@@ -1,15 +1,37 @@
+import { useState } from "react";
+const Links = [
+    { name: "Home", link: "/" },
+    { name: "Inventory", link: "/" },
+    { name: "Contact", link: "/" },
+    { name: "Help", link: "/" }
+]
 const NavBar = () => {
-  return (
-    <nav className="flex justify-between flex-wrap items-center bg-gray-900 p-4">
-        <div className="text-blue-500 border-2 border-red-100 border-solid xsml:w-full xsml:text-center md:w-2/12">Logo</div>
-        <div className="flex gap-4 border-2 border-red-700 border-solid xsml:w-full xsml:justify-between md:w-9/12 md:justify-end"> 
-            <a href="#services" className=" text-gray-300  hover:bg-gray-700 font-medium rounded-md px-3 py-2">services</a>
-            <a href="#home" className=" text-gray-300  hover:bg-gray-700 font-medium rounded-md px-3  py-2">home</a>
-            <a href="#contact" className=" text-gray-300  hover:bg-gray-700 font-medium rounded-md px-3 py-2">contact</a>
-            <a href="#about" className=" text-gray-300  hover:bg-gray-700 font-medium rounded-md px-3 py-2">About</a>
-            <a href="#" className="text-gray-300 hover:bg-gray-700 px-3 rounded-md font-medium py-2">Contact</a>
-        </div>
-    </nav>
-  )
-} 
-export default NavBar
+    const [open, setOpen] = useState(false);
+
+    return (
+        <nav className="bg-gray-900 shadow-lg">
+            <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                    <span className="text-3xl text-blue-500">
+                        <ion-icon name="book" size="large"></ion-icon>
+                    </span>
+                    <span className="text-xl text-yellow-500 font-bold">Brogrammers</span>
+                </div>
+                <div className="md:hidden">
+                    <button className="text-blue-500" onClick={() => setOpen(!open)}>
+                        <ion-icon name={open ? "close" : "menu"} size="large"></ion-icon>
+                    </button>
+                </div>
+                <ul className={`md:flex flex-col md:flex-row md:items-center ${open ? 'block' : 'hidden'} md:w-auto`}>
+                    {Links.map((link, index) => (
+                        <li key={index} className="md:ml-6 mt-3 md:mt-0">
+                            <a href={link.link} className="text-white hover:text-blue-500 duration-500 text-lg md:text-xl">{link.name}</a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </nav>
+    )
+}
+
+export default NavBar;
