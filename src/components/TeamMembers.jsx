@@ -1,7 +1,5 @@
-import React from 'react';
-
-const TeamMembers = () => {
-  // Dummy data for team members
+import React from 'react'; 
+const TeamMembers = () => { 
   const teamMembers = [
     {
       id: 1,
@@ -16,12 +14,25 @@ const TeamMembers = () => {
       role: 'UI/UX Designer',
       email: 'jane@example.com',
       phone: '+0987654321',
+    }, 
+    {
+        id: 1,
+        name: 'John Doe',
+        role: 'Software Engineer',
+        email: 'john@example.com',
+        phone: '+1234567890',
     },
-    // Add more team members as needed
+    {
+        id: 1,
+        name: 'John Doe',
+        role: 'Software Engineer',
+        email: 'john@example.com',
+        phone: '+1234567890',
+    },
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="mx-auto px-4 py-8">
       <h2 className="text-3xl font-semibold text-gray-800 mb-4">Our Team</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {teamMembers.map((member) => (

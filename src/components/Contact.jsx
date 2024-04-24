@@ -18,7 +18,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="mx-auto px-4 py-8">
       <h2 className="text-3xl font-semibold text-gray-800 mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
