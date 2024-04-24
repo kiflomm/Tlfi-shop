@@ -1,11 +1,11 @@
 import {useState} from 'react'
 const inventories =  [
-    {image:{src:"https://i.postimg.cc/dtWhHL7d/clothe1.jpg",alt:"this is alt"},name:"bag",description:"this is description for the product it can span more than one line",price:"$3.24"},
-    {image:{src:"https://i.postimg.cc/5N9HSwtb/clothe2.jpg",alt:"this is alt"},name:"bag",description:"this is description for the product it can span more than one line",price:"$3.24"},
-    {image:{src:"https://i.postimg.cc/K8RRdxLW/clothe3.jpg",alt:"this is alt"},name:"bag",description:"this is description for the product it can span more than one line",price:"$3.24"},
-    {image:{src:"https://i.postimg.cc/wM21dB0C/clothe4.jpg",alt:"this is alt"},name:"bag",description:"this is description for the product it can span more than one line",price:"$3.24"},
-    {image:{src:"https://i.postimg.cc/8kmJvyNZ/clothe5.jpg",alt:"this is alt"},name:"bag",description:"this is description for the product it can span more than one line",price:"$3.24"},
-    {image:{src:"https://i.postimg.cc/k5LgF6gc/clothe6.jpg",alt:"this is alt"},name:"bag",description:"this is description for the product it can span more than one line",price:"$3.24"}
+    {image:{src:"https://i.postimg.cc/c1mjF3ch/Crowning-Kaba-Set.jpg",alt:"this is alt"},name:"ካባ",description:"this is description for the product it can span more than one line",price:"$3.24"},
+    {image:{src:"https://i.postimg.cc/nchWgLRJ/Deep-Purple-Habesha-Dress.jpg",alt:""},name:"ዙርያ",description:"this is description for the product it can span more than one line",price:"$3.24"},
+    {image:{src:"https://i.postimg.cc/nr0PM8Lg/Deep4.jpg",alt:"this is alt"},name:"መርዑት",description:"this is description for the product it can span more than one line",price:"$3.24"},
+    {image:{src:"https://i.postimg.cc/XqVPVNn9/Meseret.jpg",alt:"this is alt"},name:"መስቀል",description:"this is description for the product it can span more than one line",price:"$3.24"},
+    {image:{src:"https://i.postimg.cc/XqVPVNn9/Meseret.jpg",alt:"this is alt"},name:"ፃዕዳ",description:"this is description for the product it can span more than one line",price:"$3.24"},
+    {image:{src:"https://i.postimg.cc/k5LgF6gc/clothe6.jpg",alt:"this is alt"},name:"ቢጫ",description:"this is description for the product it can span more than one line",price:"$3.24"}
 ] 
 const Inventory = () => {
     return (
@@ -18,7 +18,7 @@ const Inventory = () => {
             <div className="grid shadow-lg  grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mx-4">
                 {inventories.map((inventory,index)=> ( 
                     <div className="bg-white rounded-lg shadow-lg overflow-hidden" key={index}> 
-                        <img src={inventory.image.src} alt={inventory.image.alt} className=" w-full h-48 object-cover"/> 
+                        <img src={inventory.image.src} alt={inventory.image.alt} className=" mx-auto py-4 w-[300px] h-[300px] object-fill"/> 
                         <div className="p-4">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">{inventory.name}</h3>
                             <p className="text-gray-600">{inventory.description}</p>

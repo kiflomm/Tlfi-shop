@@ -13,9 +13,9 @@ const NavBar = () => {
             <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <span className="text-3xl text-blue-500">
-                        <ion-icon name="book" size="large"></ion-icon>
+                        <ion-icon name="woman-outline" size="large"></ion-icon>
                     </span>
-                    <span className="text-xl text-yellow-500 font-bold">Brogrammers</span>
+                    <span className="text-xl text-yellow-500 font-bold">ናትና ጥልፊ</span>
                 </div>
                 <div className="md:hidden">
                     <button className="text-blue-500" onClick={() => setOpen(!open)}>
