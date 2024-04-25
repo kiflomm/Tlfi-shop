@@ -6,12 +6,12 @@ const ContactUs = () => {
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Perform contact form submission logic here
+    e.preventDefault(); 
+
     console.log('Name:', name);
     console.log('Email:', email);
-    console.log('Message:', message);
-    // Reset form fields
+    console.log('Message:', message); 
+    
     setName('');
     setEmail('');
     setMessage('');

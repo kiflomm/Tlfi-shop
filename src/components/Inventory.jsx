@@ -1,9 +1,9 @@
 import {useState} from 'react'
 const inventories =  [
-    {image:{src:"https://i.postimg.cc/c1mjF3ch/Crowning-Kaba-Set.jpg",alt:"this is alt"},name:"ካባ",description:"this is description for the product it can span more than one line",price:"$3.24"},
+    {image:{src:"https://i.postimg.cc/c1mjF3ch/Crowning-Kaba-Set.jpg",alt:"This is alt"},name:"ካባ",description:"This is description for the product it can span more than one line",price:"$3.24"},
     {image:{src:"https://i.postimg.cc/nchWgLRJ/Deep-Purple-Habesha-Dress.jpg",alt:""},name:"ዙርያ",description:"this is description for the product it can span more than one line",price:"$3.24"},
     {image:{src:"https://i.postimg.cc/nr0PM8Lg/Deep4.jpg",alt:"this is alt"},name:"መርዑት",description:"this is description for the product it can span more than one line",price:"$3.24"},
-    {image:{src:"https://i.postimg.cc/XqVPVNn9/Meseret.jpg",alt:"this is alt"},name:"መስቀል",description:"this is description for the product it can span more than one line",price:"$3.24"},
+    {image:{src:"https://i.postimg.cc/XqVPVNn9/Meseret.jpg",alt:"this is alt"},name:"መስቀል",description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum consequuntur ab ea tempore non cumque, natus sit nisi eius officia repellat porro magnam reiciendis illo ut, debitis obcaecati alias?this is description for the product it can span more than one line",price:"$3.24"},
     {image:{src:"https://i.postimg.cc/XqVPVNn9/Meseret.jpg",alt:"this is alt"},name:"ፃዕዳ",description:"this is description for the product it can span more than one line",price:"$3.24"},
     {image:{src:"https://i.postimg.cc/k5LgF6gc/clothe6.jpg",alt:"this is alt"},name:"ቢጫ",description:"this is description for the product it can span more than one line",price:"$3.24"}
 ] 
@@ -17,8 +17,8 @@ const Inventory = () => {
             </div>
             <div className="grid shadow-lg  grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mx-4">
                 {inventories.map((inventory,index)=> ( 
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden" key={index}> 
-                        <img src={inventory.image.src} alt={inventory.image.alt} className=" mx-auto py-4 w-[300px] h-[300px] object-fill"/> 
+                    <div className="bg-white rounded-lg shadow-lg hover:scale-105" key={index}> 
+                        <img src={inventory.image.src} alt={inventory.image.alt} className="mx-auto w-[400px] h-[400px] rounded-lg"/> 
                         <div className="p-4">
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">{inventory.name}</h3>
                             <p className="text-gray-600">{inventory.description}</p>
