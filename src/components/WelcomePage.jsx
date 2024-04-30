@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-const WelcomePage = () => {
+const WelcomePage = () => {  
 const messages = [
     'Welcome to our online store!',
     'Find the best deals here!',
@@ -14,23 +14,19 @@ const messages = [
     return () => clearInterval(intervalId);
   }, []);
 
-  return ( 
-    
-        <section>
-        <div className={`h-96 bg-gray-500 text-white  py-20`}>
-            <div className="px-0 md:px-4">
-                <h1 className="text-center text-3xl md:text-4xl font-bold m-0 mb-4">Welcome to our E-commerce Store</h1>
-                <p className="text-xl text-center md:text-lg m-0 mb-8">Find the best deals and shop with confidence!</p>   
-            </div>
-        </div>
-        <div className="">
-                    <div className="bg-gray-900 bg-opacity-75 p-4 rounded-md text-center font-semibold">
-                    <p className="text-xl">{messages[currentMessageIndex]}</p>
-                    </div>
-        </div>
-      </section> 
-    
-      
+  return (   
+        <section className='flex-1 bg-[url(https://i.postimg.cc/Kzfb9648/hero.jpg)] text-yellow-500  flex flex-col justify-between'>
+                <div className=" flex-1 flex flex-col items-center justify-around px-0 md:px-4">
+                    <h1 className="text-center  md:text-4xl font-bold text-3xl shadow-2xl shadow-gray-900 ">Welcome to our E-commerce Store</h1>
+                    <p className="text-2xl text-center md:text-lg m-0 mb-8 text-white bg-red-500 bg-opacity-20 p-4 w-full font-semibold">Find the best deals and shop with confidence!</p>   
+                </div> 
+                <div className="flex-1">
+                    
+                </div>
+                <div className="flex-1 flex items-center justify-center text-center text-white font-semibold">
+                    <p className="text-2xl  bg-red-500 bg-opacity-40 p-4 w-full ">{messages[currentMessageIndex]}</p>
+                </div> 
+        </section>   
   );
 };  
 export default WelcomePage;

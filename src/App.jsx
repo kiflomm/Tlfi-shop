@@ -1,3 +1,4 @@
+import { useState } from "react"
 import NavBar from "./components/NavBar" 
 import Inventory from './components/Inventory'
 import LogIn from './components/LogIn'
@@ -7,32 +8,19 @@ import TeamMembers from "./components/TeamMembers"
 import Footer from "./components/Footer"
 import Contact from './components/Contact' 
 import { Route,Routes } from 'react-router-dom';
-const App = () => {
+const App = () => { 
   return ( 
-    <>
-        <NavBar />
-        <div className="main-content"> 
+    <div className="flex flex-col min-h-screen mx-1">
+        <NavBar /> 
             <Routes>
-                <Route path="/" Component={WelcomePage} />
-                <Route path="/inventory" Component={Inventory} />
-                <Route path="/teams" Component={TeamMembers} />
-                <Route path="/contact" Component={Contact} /> 
-                <Route path="/login" Component={LogIn} /> 
-                <Route path="/team" Component={TeamMembers} /> 
-            </Routes> 
-        </div>
-        {
-        /* <WelcomePage />
-        <Inventory /> 
-        <div className="grid grid-cols-1 md:grid-cols-2">
-         <LogIn />
-         <SignUP />
-        </div>
-        <TeamMembers />
-        <Contact /> */
-        }
-        <Footer/>
-    </> 
+                <Route path="/" element= <WelcomePage /> />
+                <Route path="/inventory" element= <Inventory /> /> 
+                <Route path="/contact" element= <Contact /> /> 
+                <Route path="/login" element= <LogIn /> /> 
+                <Route path="/team" element= <TeamMembers /> /> 
+            </Routes>  
+        <Footer className=""/>
+    </div> 
   )
 } 
 export default App

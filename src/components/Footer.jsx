@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({className}) => {
   return (
-    <footer className="bg-gray-900 text-white py-6">
+    <footer className={`bg-gray-900 text-white py-6 ${className}`}>
       <div className="mx-auto px-4">
         <div className="flex flex-col md:flex-row md:justify-between">
           <div className="mb-4 md:mb-0">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,useRef,useEffect } from "react";
 import { NavLink } from "react-router-dom";
 const Links = [
     { name: "Home", link: "/" },
@@ -7,10 +7,12 @@ const Links = [
     { name: "Log in", link: "/login" },
     { name: 'Our Team', link: "/team"}
 ]
-const NavBar = () => {
+const NavBar = () => {  
+    let initial=70; 
+    const navBarRef = useRef()   
     const [open, setOpen] = useState(false); 
-    return (
-        <nav className="bg-gray-900 shadow-lg fixed top-0 w-full">
+    return ( 
+        <nav className="bg-gray-900 shadow-lg w-full" ref={navBarRef}>
             <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <span className="text-3xl text-blue-500">
@@ -19,7 +21,7 @@ const NavBar = () => {
                     <NavLink to={"/"} className="text-xl text-yellow-500 font-bold" >ናትና ጥልፊ</NavLink>
                 </div>
                 <div className="md:hidden">
-                    <button className="text-blue-500" onClick={() => setOpen(!open)}>
+                    <button className="text-blue-500" onClick={()=>setOpen(!open)}>
                         <ion-icon name={open ? "close" : "menu"} size="large"></ion-icon>
                     </button>
                 </div>
@@ -31,7 +33,7 @@ const NavBar = () => {
                     ))}
                 </ul>
             </div>
-        </nav>
+        </nav> 
     )
 }
 

@@ -34,20 +34,32 @@ const Inventory = () => {
         </main>
     )
 }
-const SearchBar = ({className}) => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const handleSearch = (event) => {
-      setSearchTerm(event.target.value)
-    }  
-    return ( 
+  const SearchBar = ({ onSearch }) => {
+    const [query, setQuery] = useState('');
+  
+    const handleInputChange = (event) => {
+      setQuery(event.target.value);
+    };
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      // Pass the query to the parent component for searching
+      onSearch(query);
+    };
+  
+    return (
+      <form onSubmit={handleSubmit} className="flex items-center justify-center mt-4">
         <input
           type="text"
-          placeholder="Search Here"
-          value={searchTerm}
-          onChange={handleSearch}
-          className={className}
-        />  
-    )
-  }
-  
+          value={query}
+          onChange={handleInputChange}
+          placeholder="Search..."
+          className="py-2 px-4 w-full max-w-lg border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button type="submit" className="ml-2 py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+          Search
+        </button>
+      </form>
+    );
+  };
 export default Inventory;
